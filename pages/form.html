@@ -1,0 +1,73 @@
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-3">
+                    
+                    <!-- Regisztrációs űrlap -->
+                     <form class="form-horizontal reg-form" data-ng-controller="formController">
+                        <!-- Felhasználó név -->
+                      <div class="form-group">
+                        <label for="username" class="col-sm-4 control-label">Felhasználó</label>
+                        <div class="col-sm-8">
+                          <input name="username" data-ng-model="user.username" type="text" class="form-control" id="username" placeholder="Felhasználó">
+                        </div>
+                      </div>
+                       
+                        <!-- Cím -->
+                      <div class="form-group">
+                        <label for="address" class="col-sm-4 control-label">Cím</label>
+                        <div class="col-sm-8">
+                          <input name="address" data-ng-model="user.address" type="text" class="form-control" id="address" placeholder="Cím">
+                        </div>
+                      </div>
+                       
+                        <!-- Telefonszám -->
+                      <div class="form-group">
+                        <label for="phone" class="col-sm-4 control-label">Telefon</label>
+                        <div class="col-sm-8">
+                          <input name="phone" data-ng-model="user.phone" type="text" class="form-control" id="phone" placeholder="Telefon">
+                        </div>
+                      </div>
+                       
+                        <!-- Email -->
+                      <div class="form-group">
+                        <label for="email" class="col-sm-4 control-label">Email</label>
+                        <div class="col-sm-8">
+                          <input name="email" data-ng-model="user.email" type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                      </div>
+                        <!-- Jelszó -->
+                      <div class="form-group">
+                        <label for="password" class="col-sm-4 control-label">Password</label>
+                        <div class="col-sm-8">
+                          <input name="password" data-ng-model="user.password" type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> Remember me
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                        <!-- Küldés -->
+                      <div class="form-group">
+<!--
+                        <div class="col-xs-6">
+                          <button type="button" class="btn btn-default" data-ng-click="getData()">Lekérés</button>
+                        </div>
+-->
+                        <div class="col-xs-6">
+                          <button type="button" class="btn btn-default" data-ng-click="proccessForm()">Küldés</button>
+                        </div>
+                      </div>
+                      
+                      <div class="col-xs-12" data-ng-repeat="(_key_, _value_) in user">
+                           <div class="col-xs-4">{{ _key_ }}</div>
+                           <div class="col-xs-8">{{ _value_ }}</div>
+                           <div class="clerfix">&nbsp;</div>
+<!--                        {{ user | json }}   -->
+                       </div>
+                    </form>
+               </div>
+        </div>
